@@ -1,0 +1,25 @@
+<section id="github">
+    <h2>GitHub Repositories</h2>
+    <div class="github-repos">
+        <!-- GitHub repository cards will be dynamically added here using JavaScript -->
+    </div>
+    <script>
+        // Fetch GitHub repositories using GitHub API
+        fetch('https://api.github.com/users/vivekjhaconnect/repos')
+            .then(response => response.json())
+            .then(repos => {
+                const githubRepos = document.querySelector('.github-repos');
+
+                repos.forEach(repo => {
+                    const repoCard = document.createElement('div');
+                    repoCard.classList.add('repo');
+                    repoCard.innerHTML = `
+                        <h3>${repo.name}</h3>
+                        <p>${repo.description}</p>
+                        <a href="${repo.html_url}" target="_blank">View on GitHub</a>
+                    `;
+                    githubRepos.appendChild(repoCard);
+                });
+            });
+    </script>
+</section>
