@@ -1930,3 +1930,7 @@ ul {
 .repo a:hover {
   background-color: #0056b3; /* Darker blue on hover */
 }
+.custom-image {
+  width: 220px;
+  height: 80px;
+}
