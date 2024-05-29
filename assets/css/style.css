@@ -1934,3 +1934,6 @@ ul {
   width: 220px;
   height: 80px;
 }
+.rounded-image {
+  border-radius: 15%; /* This makes the image circular */
+}
