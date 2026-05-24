@@ -1,0 +1,29 @@
+[
+  {
+    "id": 1,
+    "title": "Generative AI in Production: Key Architecture & Pitfalls",
+    "date": "May 15, 2026",
+    "category": "Generative AI",
+    "summary": "Deploying LLM-based applications into enterprise production involves managing token costs, latency, and response reliability. Here is our architectural blueprint.",
+    "content": "<p>Moving from a prototype LLM app to a production-ready agent is a massive engineering leap. While building a quick proof-of-concept (POC) using LangChain or LlamaIndex takes only a few hours, launching it to thousands of users requires a much more robust setup.</p><h4>1. The Retrieval-Augmented Generation (RAG) Pipeline</h4><p>Simple vector lookups often fail in production because they lack semantic hierarchy and contextual awareness. A production-grade RAG pipeline should employ:</p><ul><li><strong>Hybrid Search:</strong> Combining dense vector search (semantic) with sparse keyword search (BM25) to cover both exact matches and concepts.</li><li><strong>Re-ranking Models:</strong> Running retrieved nodes through a cross-encoder model (like Cohere ReRank) to refine relevance scores before feeding text to the LLM.</li><li><strong>Query Rewriting:</strong> Standardizing user inputs so they are optimized for retrieval queries.</li></ul><h4>2. Guardrails and Security</h4><p>We cannot rely purely on LLM prompt instructions to prevent prompt injections or hallucinations. Implementing validator layers such as NeMo Guardrails or Llama Guard is essential for checking user inputs and model outputs before they reach the interface.</p><h4>3. Cost and Latency Optimization</h4><p>Enterprise LLMs get expensive quickly. By implementing semantic caching (storing and fetching similar queries from Redis), we can bypass calling the model for duplicate user queries, reducing average API response time from 2s to under 100ms.</p>",
+    "image": "https://images.unsplash.com/photo-1677442136019-21780efad99a?auto=format&fit=crop&w=800&q=80"
+  },
+  {
+    "id": 2,
+    "title": "Demystifying Vector Databases & Knowledge Graphs",
+    "date": "April 28, 2026",
+    "category": "Data Architecture",
+    "summary": "Should you store your enterprise data in a pure vector database, a traditional database, or a knowledge graph? Let us compare ChromaDB, Pinecone, and Neo4j.",
+    "content": "<p>In the age of LLMs, data representation has shifted. Storing data in relational rows is no longer sufficient for complex semantic searches. Instead, organizations are choosing between vector representations and graph networks.</p><h4>1. Vector Databases (Pinecone, ChromaDB, Milvus)</h4><p>Vector databases represent documents as multi-dimensional mathematical embeddings. They excel at high-speed similarity searches: finding pieces of text that are conceptually close to a query. However, they lack the ability to traverse structured relationships.</p><h4>2. Knowledge Graphs (Neo4j, AWS Neptune)</h4><p>Knowledge graphs store entities as nodes and relationships as edges. This is highly valuable when you need to answer questions like: <em>'Which servers are connected to the network switch that failed, and who is the administrator responsible for them?'</em></p><h4>3. GraphRAG: The Best of Both Worlds</h4><p>The state-of-the-art approach combines both models. By storing document snippets as nodes in a graph and indexing their embedded vectors, an LLM can traverse structured relationships while retaining deep semantic search capabilities. This reduces search hallucination rates by up to 40% compared to pure vector search.</p>",
+    "image": "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=800&q=80"
+  },
+  {
+    "id": 3,
+    "title": "Building Scalable Data Pipelines on Azure with PySpark",
+    "date": "March 12, 2026",
+    "category": "Data Engineering",
+    "summary": "A deep dive into processing large datasets using Azure Databricks, Delta Lake, and PySpark to feed predictive machine learning models in real time.",
+    "content": "<p>Modern data science requires clean, reliable, and real-time data ingestion. Relying on legacy cron-job ETL scripts is no longer viable when dealing with gigabytes of daily transactional records. Let us explore building scalable pipelines on the Azure ecosystem.</p><h4>1. Databricks and Delta Lake Integration</h4><p>Delta Lake adds an ACID transactional layer over raw parquet files stored in Azure Data Lake Storage (ADLS Gen2). This ensures that concurrent reads and writes do not corrupt our tables, and enables 'Time Travel' to query historical data snapshots.</p><h4>2. Writing Optimized PySpark Queries</h4><p>To avoid bottlenecks in spark processing:</p><ul><li><strong>Avoid Shuffling:</strong> Limit operations like <code>groupBy</code> and <code>join</code> which force data transfers across network nodes. Use broadcast joins for smaller lookup tables.</li><li><strong>Partition Wisely:</strong> Partition columns based on query filters (like date or region) to avoid full directory scanning.</li><li><strong>Avoid UDFs:</strong> Custom Python User-Defined Functions cannot be optimized by Spark's Catalyst engine. Prefer native Spark SQL functions wherever possible.</li></ul><h4>3. Real-time Feature Stores</h4><p>Once features are generated in Spark, they are published directly to low-latency feature stores (like Azure Cosmos DB or Redis) so that downstream Machine Learning APIs can retrieve user profiles in milliseconds for inference.</p>",
+    "image": "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=800&q=80"
+  }
+]

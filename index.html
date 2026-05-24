@@ -1,753 +1,500 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Vivek Jha - Personal Portfolio</title>
+  <title>Vivek Jha - Manager - AI/ML | Personal Portfolio</title>
 
-  <!--
-    - favicon
-  -->
+  <!-- Favicon -->
   <link rel="shortcut icon" href="./assets/images/logo.ico" type="image/x-icon">
 
-  <!--
-    - custom css link
-  -->
+  <!-- Custom CSS -->
   <link rel="stylesheet" href="./assets/css/style.css">
 
-  <!--
-    - google font link
-  -->
+  <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome 6 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <script>
+    // Inline script to prevent theme flashing on load
+    (function () {
+      const savedTheme = localStorage.getItem('theme') || 'dark';
+      document.documentElement.setAttribute('data-theme', savedTheme);
+    })();
+  </script>
 </head>
 
 <body>
 
-  <!--
-    - #MAIN
-  -->
-
-  <main>
-
-    <!--
-      - #SIDEBAR
-    -->
-
-    <aside class="sidebar" data-sidebar>
-
-      <div class="sidebar-info">
-
-        <figure class="avatar-box">
-          <img src="./assets/images/vivek_profile.jpeg" alt="Vivek Jha" width="80" class="rounded-image">
-        </figure>
-
-        <div class="info-content">
-          <h1 class="name" title="Vivek Jha">Vivek Jha</h1>
-
-          <p class="title">Lead Data Scientist</p>
+  <!-- Sticky Top Header & Navbar -->
+  <header class="site-header" data-site-header>
+    <div class="header-container">
+      <a href="#hero" class="logo-link">
+        <img src="./assets/images/vivek_profile.jpeg" alt="Vivek Jha" class="header-logo rounded-image">
+        <div class="logo-text">
+          <span class="logo-name">Vivek Jha</span>
+          <span class="logo-title">Manager - AI/ML</span>
         </div>
-
-        <button class="info_more-btn" data-sidebar-btn>
-          <span>Show Contacts</span>
-
-          <ion-icon name="chevron-down"></ion-icon>
-        </button>
-
-      </div>
-
-      <div class="sidebar-info_more">
-
-        <div class="separator"></div>
-
-        <ul class="contacts-list">
-
-          <li class="contact-item">
-
-            <div class="icon-box">
-              <ion-icon name="mail-outline"></ion-icon>
-            </div>
-
-            <div class="contact-info">
-              <p class="contact-title">Email</p>
-
-              <a href="mailto:vivekjhahsp@gmail.com" class="contact-link">vivekjhahsp@gmail.com</a>
-            </div>
-
-          </li>
-
-          <li class="contact-item">
-
-            <div class="icon-box">
-              <ion-icon name="calendar-outline"></ion-icon>
-            </div>
-
-            <div class="contact-info">
-              <p class="contact-title">Birthday</p>
-
-              <time datetime="1993-08-00">Aug, 1993</time>
-            </div>
-
-          </li>
-
-          <li class="contact-item">
-
-            <div class="icon-box">
-              <ion-icon name="location-outline"></ion-icon>
-            </div>
-
-            <div class="contact-info">
-              <p class="contact-title">Location</p>
-
-              <address>Bengaluru, Karnataka, India</address>
-            </div>
-
-          </li>
-
-        </ul>
-
-        <div class="separator"></div>
-
-        <ul class="social-list">
-
-          <li class="social-item">
-            <a href="#" class="social-link">
-              <ion-icon name="logo-facebook"></ion-icon>
-            </a>
-          </li>
-
-          <li class="social-item">
-            <a href="https://twitter.com/VivekJhaConnect" class="social-link">
-              <ion-icon name="logo-twitter"></ion-icon>
-            </a>
-          </li>
-
-          <li class="social-item">
-            <a href="#" class="social-link">
-              <ion-icon name="logo-instagram"></ion-icon>
-            </a>
-          </li>
-
-          <li class="social-item">
-            <a href="https://github.com/VivekJhaConnect" class="social-link">
-              <ion-icon name="logo-github"></ion-icon>
-            </a>
-          </li>
-        </ul>
-
-      </div>
-
-    </aside>
-
-
-
-
-
-    <!--
-      - #main-content
-    -->
-
-    <div class="main-content">
-
-      <!--
-        - #NAVBAR
-      -->
-
-      <nav class="navbar">
-
+      </a>
+      
+      <nav class="navbar" data-navbar>
         <ul class="navbar-list">
-
           <li class="navbar-item">
-            <button class="navbar-link  active" data-nav-link>About</button>
+            <a href="#hero" class="navbar-link active" data-nav-link>Home</a>
           </li>
-
           <li class="navbar-item">
-            <button class="navbar-link" data-nav-link>Resume</button>
+            <a href="#about" class="navbar-link" data-nav-link>About</a>
           </li>
-
           <li class="navbar-item">
-            <button class="navbar-link" data-nav-link>Portfolio</button>
+            <a href="#resume" class="navbar-link" data-nav-link>Resume</a>
           </li>
-
           <li class="navbar-item">
-            <button class="navbar-link" data-nav-link>Blog</button>
+            <a href="#portfolio" class="navbar-link" data-nav-link>Portfolio</a>
           </li>
-
           <li class="navbar-item">
-            <button class="navbar-link" data-nav-link>Contact</button>
+            <a href="#blog" class="navbar-link" data-nav-link>Blog</a>
           </li>
-
+          <li class="navbar-item">
+            <a href="#contact" class="navbar-link" data-nav-link>Contact</a>
+          </li>
+          <li class="navbar-item desktop-theme-toggle">
+            <button class="theme-toggle-btn" data-theme-toggle title="Toggle Theme">
+              <i class="fa-regular fa-moon"></i>
+            </button>
+          </li>
         </ul>
-
       </nav>
 
-      <!--
-        - #ABOUT
-      -->
+      <div class="header-actions">
+        <button class="theme-toggle-btn mobile-theme-toggle" data-theme-toggle title="Toggle Theme">
+          <i class="fa-regular fa-moon"></i>
+        </button>
+        <button class="hamburger-btn" data-hamburger-btn aria-label="Toggle Navigation">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+    </div>
+  </header>
 
-      <article class="about active" data-page="about">
-        <header>
-            <h2 class="h2 article-title">About me</h2>
-          </header>
+  <!-- Main Body Content -->
+  <main class="main-container">
+
+    <!-- 1. Hero Section -->
+    <section id="hero" class="section hero-section">
+      <div class="hero-grid">
         
-          <section class="about-text">
-            <p>
-              Over 11 years of experience, including nearly 6 years in Generative AI, LLMs,
-              NLP, Deep Learning, Machine Learning, AI, Data Science, Big Data, and
-              Azure Cloud. Passionate about leading innovation and delivering advanced
-              technology solutions to exceed business objectives
-            </p>
-            <br>
-            <p>
-              <b>Generative AI (Gen AI)</b> - Langchain, OpenAI, ChatGPT, Prompt Engineering & Optimization, VectorDB, Knowledge Graph, Fine Tuning, RAG, Data Privacy & LLamba
-              <br>
-              <b>Natural Language Processing (NLP) </b>- NLTK, Word2Vec, BERT, LSTM, Text Classification<br>
-              <b>Deep Learning (DL) </b>- PyTorch, CNN, RNN & Transformer Model.<br>
-              <b>Machine Learning (ML) </b>- Sklearn, Spacy, Dask, Supervised & Unsupervised Algorithms (Linear Regression, Logistic Regression, Random Forest, Decision Tree, Xgboost), Dimensionality Reduction (PCA), Statistical Modeling, Sales Forecasting & Model Optimization<br>
-              <b>Data Analysis and Visualization</b> - PowerBI, Pandas, NumPy, Matplotlib, Seaborn, Plotly, Dask & Polars<br>
-              <b>Azure Cloud Services</b> - ADLS Gen2, Microsoft Fabric, Azure Synapse Analytics, Azure Databricks (AD), Azure Data Factory (ADF), Azure Cosmos DB<br>
-              <b>Big Data & DevOps Tools</b> - Spark, PySpark, Docker, Kubernetes, Git & Gitlab<br>
-              <b>Languages & Database</b> - Python, Java, SQL, Snowflake, MySQL & ChromaDB<br>
-              <b>MISCELLANEOUS</b> - Trello, Jira, FastAPI, Flask API, Android & Flutter<br>
+        <!-- Left: Introduction Text & CTA -->
+        <div class="hero-left">
+          <span class="hero-badge"><i class="fa-solid fa-bolt"></i> Available for Consulting</span>
+          <h1 class="hero-title">Hello, I'm <span class="highlight-gradient">Vivek Jha</span></h1>
+          <p class="hero-subtitle">Manager - AI/ML</p>
+          <p class="hero-tagline">
+            Manager - AI/ML at <strong>PwC Acceleration Center</strong>. Specializing in <strong>Generative AI, Large Language Models (LLMs), RAG pipelines, and Azure Cloud Solutions</strong>. I build production-ready intelligent systems that solve complex business challenges.
           </p>
           
-          </section>
-        
-          <!--
-            - testimonials modal
-          -->
-        
-          <div class="modal-container" data-modal-container>
-        
-            <div class="overlay" data-overlay></div>
-        
-            <section class="testimonials-modal">
-        
-              <button class="modal-close-btn" data-modal-close-btn>
-                <ion-icon name="close-outline"></ion-icon>
-              </button>
-        
-              <div class="modal-img-wrapper">
-                <figure class="modal-avatar-box">
-                  <img src="./assets/images/avatar-1.png" alt="Daniel lewis" width="80" data-modal-img>
-                </figure>
-        
-                <img src="./assets/images/icon-quote.svg" alt="quote icon">
-              </div>
-        
-              <div class="modal-content">
-        
-                <h4 class="h3 modal-title" data-modal-title>Daniel lewis</h4>
-        
-                <time datetime="2021-06-14">14 June, 2021</time>
-        
-                <div data-modal-text>
-                  <p>
-                    Richard was hired to create a corporate identity. We were very pleased with the work done. She has a
-                    lot of experience
-                    and is very concerned about the needs of client. Lorem ipsum dolor sit amet, ullamcous cididt
-                    consectetur adipiscing
-                    elit, seds do et eiusmod tempor incididunt ut laborels dolore magnarels alia.
-                  </p>
-                </div>
-        
-              </div>
-        
-            </section>
-        
+          <div class="hero-ctas">
+            <a href="#contact" class="btn btn-primary">
+              <span>Get In Touch</span>
+              <i class="fa-solid fa-paper-plane"></i>
+            </a>
+            <a href="#portfolio" class="btn btn-secondary">
+              <span>View Portfolio</span>
+              <i class="fa-solid fa-briefcase"></i>
+            </a>
           </div>
-        
-        
-          <!--
-            - clients
-          -->
-        
-          <section class="clients">
-        
-            <h3 class="h3 clients-title">Working with...</h3>
-        
-            <ul class="clients-list has-scrollbar">
-        
-              <li class="clients-item centered-content">
-                <a href="https://www.hexaware.com" target="_blank">
-                  <img src="./assets/images/hexaware.png" alt="client logo" class="custom-image">
-                  <label for="username" class="label-white">Hexaware Technology</label>
-                </br>
-                  <label for="username" class="label-red">(Oct-2021 to Present)</label>
-                </a>
-              </li>
-        
-              <li class="clients-item centered-content">
-                <a href="http://docfocus.ca/" target="_blank">
-                  <img src="./assets/images/docfocos.png" alt="client logo" class="custom-image">
-                  <label for="username" class="label-white">Docfocus</label>
-                </br>
-                  <label for="username" class="label-red">(Feb-2018 to Aug-2021)</label>
-                </a>
-              </li>
-        
-              <li class="clients-item centered-content">
-                <a href="https://www.logixshapers.com/" target="_blank">
-                  <img src="./assets/images/logix.png" alt="client logo" class="custom-image">
-                  <label for="username" class="label-white">Logix Shapers</label>
-                </br>
-                  <label for="username" class="label-red">(July-2015 to Jan-2018)</label>
-                </a>
-              </li>
 
-              <li class="clients-item centered-content">
-                <a href="https://blacklightsw.com/" target="_blank">
-                  <img src="./assets/images/blacklight.jpg" alt="client logo" class="custom-image">
-                  <label for="username" class="label-white">Blacklight Studio</label>
-                </br>
-                  <label for="username" class="label-red">(Aug-2014 to July-2015)</label>
-                </a>
-              </li>
+          <div class="hero-socials">
+            <a href="https://github.com/VivekJhaConnect" target="_blank" title="GitHub"><i class="fa-brands fa-github"></i></a>
+            <a href="https://twitter.com/VivekJhaConnect" target="_blank" title="Twitter / X"><i class="fa-brands fa-x-twitter"></i></a>
+            <a href="https://linkedin.com/in/vivekjhaconnect" target="_blank" title="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+            <a href="#" title="Facebook"><i class="fa-brands fa-facebook"></i></a>
+          </div>
+        </div>
 
-              <li class="clients-item centered-content">
-                <a href="#">
-                  <img src="./assets/images/appbulous.png" alt="client logo" class="custom-image">
-                  <label for="username" class="label-white">Appbulous Software</label>
-                </br>
-                  <label for="username" class="label-red">(Jun-2013 to Jun-2014)</label>
-                </a>
+        <!-- Right: Profile Frame & Contact Info Card -->
+        <div class="hero-right">
+          <div class="profile-card glass-card">
+            <figure class="profile-avatar-box">
+              <img src="./assets/images/vivek_profile.jpeg" alt="Vivek Jha" class="rounded-image profile-avatar">
+            </figure>
+            
+            <div class="separator"></div>
+            
+            <!-- Quick Contact info list (integrated from old sidebar) -->
+            <ul class="quick-contact-list">
+              <li class="quick-contact-item">
+                <div class="quick-icon-box"><i class="fa-regular fa-envelope"></i></div>
+                <div class="quick-info">
+                  <p class="quick-title">Email</p>
+                  <a href="mailto:vivekjhahsp@gmail.com" class="quick-link">vivekjhahsp@gmail.com</a>
+                </div>
+              </li>
+              <li class="quick-contact-item">
+                <div class="quick-icon-box"><i class="fa-regular fa-calendar"></i></div>
+                <div class="quick-info">
+                  <p class="quick-title">Birthday</p>
+                  <time datetime="1993-08-00">Aug, 1993</time>
+                </div>
+              </li>
+              <li class="quick-contact-item">
+                <div class="quick-icon-box"><i class="fa-solid fa-location-dot"></i></div>
+                <div class="quick-info">
+                  <p class="quick-title">Location</p>
+                  <address>Bengaluru, Karnataka, India</address>
+                </div>
               </li>
             </ul>
-        
-          </section>
-    </article>
-
-      <!--
-        - #RESUME
-      -->
-
-      <article class="resume" data-page="resume">
-
-        <header>
-          <h2 class="h2 article-title">Resume</h2>
-        </header>
-
-        <section class="timeline">
-
-          <div class="title-wrapper">
-            <div class="icon-box">
-              <ion-icon name="book-outline"></ion-icon>
-            </div>
-
-            <h3 class="h3">Experience</h3>
           </div>
-
-          <ol class="timeline-list">
-
-            <li class="timeline-item">
-
-              <h4 class="h4 timeline-item-title">Lead Data Scientist</h4>
-
-              <span>Hexaware Technology Ltd.(Oct-2021 — Present)</span>
-
-              <p class="timeline-text">
-                Tech Stack: Python, FastAPI, Flask API, Machine Learning, LLMs, OpenAI,
-                Azure Cloud, LangChain, VectorDB, PySpark
-              </p>
-
-            </li>
-
-            <li class="timeline-item">
-
-              <h4 class="h4 timeline-item-title">Data Scientist</h4>
-
-              <span>Docfocus INC(Jan-2018 — Aug-2021)</span>
-
-              <p class="timeline-text">
-                Tech Stack: Python, FastAPI, Machine Learning, NPL
-              </p>
-
-            </li>
-
-            <li class="timeline-item">
-
-              <h4 class="h4 timeline-item-title">Android Developer</h4>
-
-              <span>Logix Shapers Offshore Services Pvt. Ltd.(July-2015 — Jan-2018)</span>
-
-              <p class="timeline-text">
-                Tech Stack: Python, FastAPI, Flask API, Machine Learning, LLMs, OpenAI,
-Azure Cloud, LangChain, VectorDB
-              </p>
-
-            </li>
-
-            <li class="timeline-item">
-
-              <h4 class="h4 timeline-item-title">Android Developer</h4>
-
-              <span>Blacklight Studio Works Pvt. Ltd.(Aug-2014 — July-2015)</span>
-
-              <p class="timeline-text">
-                Tech Stack: Python, FastAPI, Flask API, Machine Learning, LLMs, OpenAI,
-Azure Cloud, LangChain, VectorDB
-              </p>
-
-            </li>
-
-            <li class="timeline-item">
-
-              <h4 class="h4 timeline-item-title">Software Developer</h4>
-
-              <span>Appbulous Software Pvt. Ltd.(Jun-2013 — Jun-2014)</span>
-
-              <p class="timeline-text">
-                Tech Stack: Python, FastAPI, Flask API, Machine Learning, LLMs, OpenAI,
-Azure Cloud, LangChain, VectorDB
-              </p>
-
-            </li>
-
-          </ol>
-
-        </section>
-
-        
-        <section class="timeline">
-
-          <div class="title-wrapper">
-            <div class="icon-box">
-              <ion-icon name="book-outline"></ion-icon>
-            </div>
-
-            <h3 class="h3">Education</h3>
-          </div>
-
-          <ol class="timeline-list">
-
-            <li class="timeline-item">
-
-              <h4 class="h4 timeline-item-title">Jaipur National University, Jaipur, Rajasthan</h4>
-
-              <span>2013 — 2015</span>
-
-              <p class="timeline-text">
-                I was sturding Computer Applications
-              </p>
-
-            </li>
-
-            <li class="timeline-item">
-
-              <h4 class="h4 timeline-item-title">Magadh University, Gaya, Bihar</h4>
-
-              <span>2010 — 2013</span>
-
-              <p class="timeline-text">
-                I was sturding Computer Applications
-              </p>
-
-            </li>
-
-          </ol>
-
-        </section>
-
-      </article>
-
-
-      <!--
-        - #PORTFOLIO
-      -->
-
-      <article class="portfolio" data-page="portfolio">
-
-        <header>
-          <h2 class="h2 article-title">Portfolio</h2>
-        </header>
-        <section id="github", class="projects">
-          <div class="github-repos">
-              <!-- GitHub repository cards will be dynamically added here using JavaScript -->
-          </div>
-          <script>
-              // Fetch GitHub repositories using GitHub API
-              fetch('https://api.github.com/users/vivekjhaconnect/repos')
-                  .then(response => response.json())
-                  .then(repos => {
-                      const githubRepos = document.querySelector('.github-repos');
-  
-                      repos.forEach(repo => {
-                          const repoCard = document.createElement('div');
-                          repoCard.classList.add('repo');
-                          repoCard.innerHTML = `
-                              <h3>${repo.name}</h3>
-                              <p>${repo.description || 'No description available.'}</p>
-                              <a href="${repo.html_url}" target="_blank">View on GitHub</a>
-                          `;
-                          githubRepos.appendChild(repoCard);
-                      });
-                  })
-                  .catch(error => console.error('Failed to fetch repositories:', error));
-          </script>
-
-        <div class="filter-select-box">
-
-          <button class="filter-select" data-select>
-
-          </button>
-
         </div>
+
+      </div>
+    </section>
+
+    <!-- 2. About Me Section -->
+    <section id="about" class="section about-section glass-card">
+      <header>
+        <h2 class="h2 article-title">About Me</h2>
+      </header>
+      
+      <div class="about-content">
+        <p class="about-text">
+          Over 11 years of software engineering and data science experience, including nearly 6 years in Generative AI, LLMs,
+          NLP, Deep Learning, Machine Learning, AI, Data Science, Big Data, and
+          Azure Cloud. Passionate about leading innovation and delivering advanced
+          technology solutions to exceed business objectives.
+        </p>
+
+        <!-- Core Expertise Grid -->
+        <h3 class="h3 skills-grid-title">Core Expertise</h3>
+        <div class="expertise-grid">
+          <div class="expertise-card">
+            <div class="card-icon"><i class="fa-solid fa-brain"></i></div>
+            <h4>Generative AI & LLMs</h4>
+            <p>Langchain, OpenAI, Prompt Engineering, Vector Databases, Fine Tuning, RAG Pipelines, Knowledge Graphs</p>
+          </div>
+          <div class="expertise-card">
+            <div class="card-icon"><i class="fa-solid fa-language"></i></div>
+            <h4>NLP & Deep Learning</h4>
+            <p>NLTK, Spacy, Word2Vec, BERT, LSTM, Transformers, PyTorch, CNNs, RNNs, Text Classification</p>
+          </div>
+          <div class="expertise-card">
+            <div class="card-icon"><i class="fa-solid fa-chart-line"></i></div>
+            <h4>Machine Learning</h4>
+            <p>Supervised & Unsupervised Learning, Random Forest, XGBoost, PCA, Sales Forecasting, Model Optimization</p>
+          </div>
+          <div class="expertise-card">
+            <div class="card-icon"><i class="fa-cloud"></i></div>
+            <h4>Azure Cloud & Big Data</h4>
+            <p>ADLS Gen2, Microsoft Fabric, Databricks, Data Factory, Cosmos DB, PySpark, Spark, DevOps, Kubernetes</p>
+          </div>
+        </div>
+
+        <!-- Professional Journey Clients Carousel -->
+        <div class="journey-wrapper">
+          <h3 class="h3 clients-title">Professional Journey</h3>
+          <ul class="clients-list has-scrollbar">
+            <li class="clients-item centered-content">
+              <a href="https://www.pwc.in" target="_blank" class="client-card pwc">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/0/05/PricewaterhouseCoopers_Logo.svg" alt="PwC logo" class="custom-image">
+                <span class="client-name">PwC Acceleration Center</span>
+                <span class="client-duration">(Oct-2025 to Present)</span>
+              </a>
+            </li>
+            <li class="clients-item centered-content">
+              <a href="https://www.hexaware.com" target="_blank" class="client-card hexaware">
+                <img src="./assets/images/hexaware.png" alt="Hexaware Technologies logo" class="custom-image">
+                <span class="client-name">Hexaware Technologies</span>
+                <span class="client-duration">(Oct-2021 to Oct-2025)</span>
+              </a>
+            </li>
+            <li class="clients-item centered-content">
+              <a href="http://docfocus.ca/" target="_blank" class="client-card docfocus">
+                <img src="./assets/images/docfocos.png" alt="Docfocus logo" class="custom-image">
+                <span class="client-name">Docfocus</span>
+                <span class="client-duration">(Feb-2018 to Aug-2021)</span>
+              </a>
+            </li>
+            <li class="clients-item centered-content">
+              <a href="https://www.logixshapers.com/" target="_blank" class="client-card logix">
+                <img src="./assets/images/logix.png" alt="Logix Shapers logo" class="custom-image">
+                <span class="client-name">Logix Shapers</span>
+                <span class="client-duration">(July-2015 to Jan-2018)</span>
+              </a>
+            </li>
+            <li class="clients-item centered-content">
+              <a href="https://blacklightsw.com/" target="_blank" class="client-card blacklight">
+                <img src="./assets/images/blacklight.jpg" alt="Blacklight Studio logo" class="custom-image">
+                <span class="client-name">Blacklight Studio</span>
+                <span class="client-duration">(Aug-2014 to July-2015)</span>
+              </a>
+            </li>
+            <li class="clients-item centered-content">
+              <a href="#" class="client-card appbulous">
+                <img src="./assets/images/appbulous.png" alt="Appbulous Software logo" class="custom-image">
+                <span class="client-name">Appbulous Software</span>
+                <span class="client-duration">(Jun-2013 to Jun-2014)</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. Resume Section -->
+    <section id="resume" class="section resume-section glass-card">
+      <header>
+        <h2 class="h2 article-title">Resume</h2>
+      </header>
+
+      <!-- Experience Timeline -->
+      <section class="timeline">
+        <div class="title-wrapper">
+          <div class="icon-box">
+            <i class="fa-solid fa-briefcase"></i>
+          </div>
+          <h3 class="h3">Experience</h3>
+        </div>
+
+        <ol class="timeline-list">
+          <li class="timeline-item">
+            <h4 class="h4 timeline-item-title">Manager - AI/ML</h4>
+            <span>PwC Acceleration Center Pvt. Ltd. (Oct-2025 — Present)</span>
+            <p class="timeline-text">
+              Tech Stack: Python, Generative AI, LLMs, RAG, PySpark, Azure Databricks, Azure Cloud Services
+            </p>
+          </li>
+          <li class="timeline-item">
+            <h4 class="h4 timeline-item-title">Lead Data Scientist</h4>
+            <span>Hexaware Technology Ltd. (Oct-2021 — Oct-2025)</span>
+            <p class="timeline-text">
+              Tech Stack: Python, FastAPI, Flask API, Machine Learning, LLMs, OpenAI, Azure Cloud, LangChain, VectorDB, PySpark
+            </p>
+          </li>
+          <li class="timeline-item">
+            <h4 class="h4 timeline-item-title">Data Scientist</h4>
+            <span>Docfocus INC (Jan-2018 — Aug-2021)</span>
+            <p class="timeline-text">
+              Tech Stack: Python, FastAPI, Machine Learning, NLP
+            </p>
+          </li>
+          <li class="timeline-item">
+            <h4 class="h4 timeline-item-title">Android Developer</h4>
+            <span>Logix Shapers Offshore Services Pvt. Ltd. (July-2015 — Jan-2018)</span>
+            <p class="timeline-text">
+              Tech Stack: Python, FastAPI, Flask API, Machine Learning, LLMs, OpenAI, Azure Cloud, LangChain, VectorDB
+            </p>
+          </li>
+          <li class="timeline-item">
+            <h4 class="h4 timeline-item-title">Android Developer</h4>
+            <span>Blacklight Studio Works Pvt. Ltd. (Aug-2014 — July-2015)</span>
+            <p class="timeline-text">
+              Tech Stack: Python, FastAPI, Flask API, Machine Learning, LLMs, OpenAI, Azure Cloud, LangChain, VectorDB
+            </p>
+          </li>
+          <li class="timeline-item">
+            <h4 class="h4 timeline-item-title">Software Developer</h4>
+            <span>Appbulous Software Pvt. Ltd. (Jun-2013 — Jun-2014)</span>
+            <p class="timeline-text">
+              Tech Stack: Python, FastAPI, Flask API, Machine Learning, LLMs, OpenAI, Azure Cloud, LangChain, VectorDB
+            </p>
+          </li>
+        </ol>
       </section>
 
-      </article>
+      <!-- Education Timeline -->
+      <section class="timeline">
+        <div class="title-wrapper">
+          <div class="icon-box">
+            <i class="fa-solid fa-graduation-cap"></i>
+          </div>
+          <h3 class="h3">Education</h3>
+        </div>
 
-      <!--
-        - #BLOG
-      -->
+        <ol class="timeline-list">
+          <li class="timeline-item">
+            <h4 class="h4 timeline-item-title">Jaipur National University, Jaipur, Rajasthan</h4>
+            <span>2013 — 2015</span>
+            <p class="timeline-text">
+              Completed Master of Computer Applications (MCA).
+            </p>
+          </li>
+          <li class="timeline-item">
+            <h4 class="h4 timeline-item-title">Magadh University, Gaya, Bihar</h4>
+            <span>2010 — 2013</span>
+            <p class="timeline-text">
+              Completed Bachelor of Computer Applications (BCA).
+            </p>
+          </li>
+        </ol>
+      </section>
+    </section>
 
-      <article class="blog" data-page="blog">
+    <!-- 4. Portfolio Section -->
+    <section id="portfolio" class="section portfolio-section glass-card">
+      <header>
+        <h2 class="h2 article-title">Portfolio</h2>
+      </header>
 
-        <header>
-          <h2 class="h2 article-title">Blog</h2>
-        </header>
+      <section class="projects">
+        <!-- Desktop Filter Tabs -->
+        <ul class="filter-list" data-filter-list>
+          <li class="filter-item">
+            <button class="active" data-filter-btn>All</button>
+          </li>
+          <li class="filter-item">
+            <button data-filter-btn>Python</button>
+          </li>
+          <li class="filter-item">
+            <button data-filter-btn>Machine Learning</button>
+          </li>
+          <li class="filter-item">
+            <button data-filter-btn>Generative AI</button>
+          </li>
+        </ul>
 
-        <section class="blog-posts">
-
-          <!-- <ul class="blog-posts-list">
-
-            <li class="blog-post-item">
-              <a href="#">
-
-                <figure class="blog-banner-box">
-                  <img src="./assets/images/blog-1.jpg" alt="Design conferences in 2022" loading="lazy">
-                </figure>
-
-                <div class="blog-content">
-
-                  <div class="blog-meta">
-                    <p class="blog-category">Design</p>
-
-                    <span class="dot"></span>
-
-                    <time datetime="2022-02-23">Fab 23, 2022</time>
-                  </div>
-
-                  <h3 class="h3 blog-item-title">Design conferences in 2022</h3>
-
-                  <p class="blog-text">
-                    Veritatis et quasi architecto beatae vitae dicta sunt, explicabo.
-                  </p>
-
-                </div>
-
-              </a>
+        <!-- Mobile Filter Dropdown -->
+        <div class="filter-select-box">
+          <button class="filter-select" data-select>
+            <span data-select-value>Select Category</span>
+            <i class="fa-solid fa-chevron-down"></i>
+          </button>
+          <ul class="select-list">
+            <li class="select-item">
+              <button data-select-item>All</button>
             </li>
-
-            <li class="blog-post-item">
-              <a href="#">
-
-                <figure class="blog-banner-box">
-                  <img src="./assets/images/blog-2.jpg" alt="Best fonts every designer" loading="lazy">
-                </figure>
-
-                <div class="blog-content">
-
-                  <div class="blog-meta">
-                    <p class="blog-category">Design</p>
-
-                    <span class="dot"></span>
-
-                    <time datetime="2022-02-23">Fab 23, 2022</time>
-                  </div>
-
-                  <h3 class="h3 blog-item-title">Best fonts every designer</h3>
-
-                  <p class="blog-text">
-                    Sed ut perspiciatis, nam libero tempore, cum soluta nobis est eligendi.
-                  </p>
-
-                </div>
-
-              </a>
+            <li class="select-item">
+              <button data-select-item>Python</button>
             </li>
-
-            <li class="blog-post-item">
-              <a href="#">
-
-                <figure class="blog-banner-box">
-                  <img src="./assets/images/blog-3.jpg" alt="Design digest #80" loading="lazy">
-                </figure>
-
-                <div class="blog-content">
-
-                  <div class="blog-meta">
-                    <p class="blog-category">Design</p>
-
-                    <span class="dot"></span>
-
-                    <time datetime="2022-02-23">Fab 23, 2022</time>
-                  </div>
-
-                  <h3 class="h3 blog-item-title">Design digest #80</h3>
-
-                  <p class="blog-text">
-                    Excepteur sint occaecat cupidatat no proident, quis nostrum exercitationem ullam corporis suscipit.
-                  </p>
-
-                </div>
-
-              </a>
+            <li class="select-item">
+              <button data-select-item>Machine Learning</button>
             </li>
-
-            <li class="blog-post-item">
-              <a href="#">
-
-                <figure class="blog-banner-box">
-                  <img src="./assets/images/blog-4.jpg" alt="UI interactions of the week" loading="lazy">
-                </figure>
-
-                <div class="blog-content">
-
-                  <div class="blog-meta">
-                    <p class="blog-category">Design</p>
-
-                    <span class="dot"></span>
-
-                    <time datetime="2022-02-23">Fab 23, 2022</time>
-                  </div>
-
-                  <h3 class="h3 blog-item-title">UI interactions of the week</h3>
-
-                  <p class="blog-text">
-                    Enim ad minim veniam, consectetur adipiscing elit, quis nostrud exercitation ullamco laboris nisi.
-                  </p>
-
-                </div>
-
-              </a>
+            <li class="select-item">
+              <button data-select-item>Generative AI</button>
             </li>
+          </ul>
+        </div>
 
-            <li class="blog-post-item">
-              <a href="#">
+        <!-- Dynamic Repos grid -->
+        <div class="github-repos" id="github-repos-container">
+          <div class="project-loading">Fetching repositories from GitHub...</div>
+        </div>
+      </section>
+    </section>
 
-                <figure class="blog-banner-box">
-                  <img src="./assets/images/blog-5.jpg" alt="The forgotten art of spacing" loading="lazy">
-                </figure>
+    <!-- 5. Blog Section -->
+    <section id="blog" class="section blog-section glass-card">
+      <header>
+        <h2 class="h2 article-title">Blog</h2>
+      </header>
 
-                <div class="blog-content">
+      <section class="blog-posts">
+        <div class="blog-posts-grid" id="blog-posts-grid">
+          <div class="blog-loading">Fetching articles...</div>
+        </div>
+      </section>
+    </section>
 
-                  <div class="blog-meta">
-                    <p class="blog-category">Design</p>
+    <!-- 6. Contact Section -->
+    <section id="contact" class="section contact-section glass-card">
+      <header>
+        <h2 class="h2 article-title">Contact</h2>
+      </header>
 
-                    <span class="dot"></span>
+      <div class="contact-grid">
+        <!-- Maps column -->
+        <div class="contact-map">
+          <section class="mapbox" data-mapbox>
+            <figure>
+              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31104.910715583064!2d77.7159330206831!3d12.964566690387505!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae11f35d0dfc83%3A0x30cfa512d80115f9!2sWhitefield%2C%20Bengaluru%2C%20Karnataka!5e0!3m2!1sen!2sin!4v1716906280213!5m2!1sen!2sin" 
+              width="100%" height="340" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </figure>
+          </section>
+        </div>
 
-                    <time datetime="2022-02-23">Fab 23, 2022</time>
-                  </div>
+        <!-- Contact form column -->
+        <div class="contact-form-wrapper">
+          <section class="contact-form">
+            <h3 class="h3 form-title">Get In Touch</h3>
+            <!-- Formspree Endpoint Form -->
+            <form action="https://formspree.io/f/your_endpoint_here" method="POST" class="form" data-form>
+              <div class="input-wrapper">
+                <input type="text" name="fullname" class="form-input" placeholder="Full name" required data-form-input>
+                <input type="email" name="email" class="form-input" placeholder="Email address" required data-form-input>
+              </div>
+              <textarea name="message" class="form-input" placeholder="Your Message" required data-form-input></textarea>
+              <button class="form-btn" type="submit" disabled data-form-btn>
+                <i class="fa-solid fa-paper-plane"></i>
+                <span>Send Message</span>
+              </button>
+            </form>
+          </section>
+        </div>
+      </div>
+    </section>
 
-                  <h3 class="h3 blog-item-title">The forgotten art of spacing</h3>
-
-                  <p class="blog-text">
-                    Maxime placeat, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                  </p>
-
-                </div>
-
-              </a>
-            </li>
-
-            <li class="blog-post-item">
-              <a href="#">
-
-                <figure class="blog-banner-box">
-                  <img src="./assets/images/blog-6.jpg" alt="Design digest #79" loading="lazy">
-                </figure>
-
-                <div class="blog-content">
-
-                  <div class="blog-meta">
-                    <p class="blog-category">Design</p>
-
-                    <span class="dot"></span>
-
-                    <time datetime="2022-02-23">Fab 23, 2022</time>
-                  </div>
-
-                  <h3 class="h3 blog-item-title">Design digest #79</h3>
-
-                  <p class="blog-text">
-                    Optio cumque nihil impedit uo minus quod maxime placeat, velit esse cillum.
-                  </p>
-
-                </div>
-
-              </a>
-            </li>
-
-          </ul> -->
-
-        </section>
-
-      </article>
-
-      <!--
-        - #CONTACT
-      -->
-
-      <article class="contact" data-page="contact">
-
-        <header>
-          <h2 class="h2 article-title">Contact</h2>
-        </header>
-
-        <section class="mapbox" data-mapbox>
-          <figure>
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31104.910715583064!2d77.7159330206831!3d12.964566690387505!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae11f35d0dfc83%3A0x30cfa512d80115f9!2sWhitefield%2C%20Bengaluru%2C%20Karnataka!5e0!3m2!1sen!2sin!4v1716906280213!5m2!1sen!2sin" 
-            width="450" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-          </figure>
-        </section>
-
-        <section class="contact-form">
-
-          <h3 class="h3 form-title">Contact Form</h3>
-
-          <form action="#" class="form" data-form>
-
-            <div class="input-wrapper">
-              <input type="text" name="fullname" class="form-input" placeholder="Full name" required data-form-input>
-
-              <input type="email" name="email" class="form-input" placeholder="Email address" required data-form-input>
-            </div>
-
-            <textarea name="message" class="form-input" placeholder="Your Message" required data-form-input></textarea>
-
-            <button class="form-btn" type="submit" disabled data-form-btn>
-              <ion-icon name="paper-plane"></ion-icon>
-              <span>Send Message</span>
-            </button>
-
-          </form>
-
-        </section>
-
-      </article>
-
-    </div>
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="footer-content">
+        <p class="copyright">&copy; 2026 Vivek Jha. All rights reserved.</p>
+        <ul class="footer-social-list">
+          <li>
+            <a href="https://github.com/VivekJhaConnect" target="_blank" title="GitHub">
+              <i class="fa-brands fa-github"></i>
+            </a>
+          </li>
+          <li>
+            <a href="https://twitter.com/VivekJhaConnect" target="_blank" title="Twitter / X">
+              <i class="fa-brands fa-x-twitter"></i>
+            </a>
+          </li>
+          <li>
+            <a href="https://linkedin.com/in/vivekjhaconnect" target="_blank" title="LinkedIn">
+              <i class="fa-brands fa-linkedin-in"></i>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </footer>
 
   </main>
 
+  <!-- Dynamic Blog Post Modal -->
+  <div class="modal-container blog-modal-container" data-blog-modal-container>
+    <div class="overlay" data-blog-overlay></div>
+    <section class="blog-modal">
+      <button class="modal-close-btn" data-blog-modal-close-btn title="Close modal">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+      <div class="blog-modal-banner">
+        <img src="" alt="" data-blog-modal-img>
+      </div>
+      <div class="blog-modal-content">
+        <div class="blog-modal-meta">
+          <span class="blog-modal-category" data-blog-modal-category>Category</span>
+          <span class="dot"></span>
+          <time datetime="" data-blog-modal-date>Date</time>
+        </div>
+        <h3 class="h3 blog-modal-title" data-blog-modal-title>Title</h3>
+        <div class="blog-modal-text" data-blog-modal-text>
+          <!-- Injected by script.js -->
+        </div>
+      </div>
+    </section>
+  </div>
 
+  <!-- Back to Top Button -->
+  <button class="back-to-top-btn" data-back-to-top title="Back to Top">
+    <i class="fa-solid fa-arrow-up"></i>
+  </button>
 
-
-
-
-  <!--
-    - custom js link
-  -->
+  <!-- Custom JS script -->
   <script src="./assets/js/script.js"></script>
-
-  <!--
-    - ionicon link
-  -->
-  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 
 </body>
 
